@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8"> <!-- ユニコード宣言 -->
+    <title>PeachEarth 公式サイト</title> <!-- タイトル-->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="vegas/vegas.min.css">
+    <meta name=”viewport” content=”width=device-width, initial-scale=1.0″>
+    <script src="jquery-3.4.1.min.js"></script>
+    <script src="jquery.colorbox-min.js"></script>
+    <script src="vegas/vegas.min.js"></script>
+    <link rel="shortcut icon" href="yoyo.ico">
+</head>
+
+<body>
+    <header>
+        <div class="menubox">
+            <div class="logo">
+            <a href="index.html"><img src=https://placehold.jp/200x60.png></a>
+            </div>
+            <div class="menu">
+            <nav>
+                <ul>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Member</a></li>
+                    <li><a href="">Company</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        </div>
+        <div class="top_info">
+            <h2>
+                <div class="fade-in-bottom">新たなときめきをあなたに</span>
+            </h2>
+        </div>
+    </header>
+    <link rel="stylesheet" href="colorbox.css">
+    <a href="https://www.youtube.com/embed/b7CMI7YdqWM?rel=0" target="_blank" class="colorbox">
+    </a>
+    <div id="center">
+        <img src=https://placehold.jp/960x540.png>
+        <p id="appbtn">
+            <img src=https://placehold.jp/240x80.png>
+            <img src=https://placehold.jp/240x80.png>
+        </p>
+        <div class="twitter">
+            <a class="news"><iframe src="news.html" width="350" height="700"></iframe></a>
+            <a class="twitter-timeline" data-lang="ja" data-width="410" data-height="700" data-theme="dark"
+                href="https://twitter.com/MezzoTR?ref_src=twsrc%5Etfw">Tweets by MezzoTR</a>
+            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+        <p>
+            <br>
+        </p>
+    </div>
+    <footer>
+        <p class="copyright">
+            <a>Copyright© 2020 PeachEarth Ink. All Rights Reserved.<br></a>
+            </div>
+    </footer>
+    <script>
+        /* 動画表示
+        $(function () {
+            jQuery('.colorbox').colorbox({
+                open: true,
+                iframe: true,
+                innerWidth: 800,
+                innerHeight: 450
+            });
+        });
+        */
+        // TOPへ戻る
+        $(function () {
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 300) {
+                    $("#top_btn").fadeIn();
+                } else {
+                    $("#top_btn").fadeOut();
+                }
+            });
+            $("#top_btn").on("click", function () {
+                $("html, body").animate({ scrollTop: 0 }, 500, "swing");
+            });
+        });
+
+        $(function () {
+            $('header').vegas({ //背景画像でスライドショーしたい場所の設定
+                slides: [
+                    { src: 'img/alto_san.jpg' }, //スライドする画像を配列で設定
+                    { src: 'img/8pa.png' }
+                ],
+                delay: 7500, //スライドまでの時間ををミリ秒単位で設定
+                timer: true, //タイマーバーの表示/非表示を切り替え
+                animation: 'random', //スライドのアニメーションを設定
+                transition: 'blur', //スライド間のエフェクトを設定
+                transitionDuration: 1000, //エフェクト時間をミリ秒単位で設定
+                overlay:'vegas/dist/overlays/09.png'
+            });
+        });
+    </script>
+    <a id="top_btn" href="#top" class="top_button" style="display: none;"><img src="up.png" align="right"></a>
+</body>
+
+</html>
